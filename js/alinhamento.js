@@ -12,6 +12,7 @@ const btnAnalisar = document.querySelector('#analisar');
 arquivo_1.addEventListener('change', function(){
   const arquivo = this.files[0];
   nomeArq1 = this.files[0].name;
+  nomeArq1 = nomeArq1.substring(0, nomeArq1.length - 4);
   const leitor = new FileReader();
 
   leitor.addEventListener('load', function(){
@@ -26,6 +27,7 @@ arquivo_1.addEventListener('change', function(){
 arquivo_2.addEventListener('change', function(){
   const arquivo = this.files[0];
   nomeArq2 = this.files[0].name;
+  nomeArq2 = nomeArq2.substring(0, nomeArq2.length - 4);
   const leitor = new FileReader();
 
   leitor.addEventListener('load', function(){
@@ -100,12 +102,21 @@ function alignSequences(seq1, seq2, matchScore = 2, mismatchPenalty = -5, gapPen
 
 // const [alignedSeq1, alignedSeq2] = alignSequences(seq1, seq2);
 
+let ans1;
+let ans2;
+
 btnAnalisar.addEventListener('click', function(){
   const seq1 = preview_1.value;
   const seq2 = preview_2.value;
 
+  console.log(seq1);
+  
   const [alignedSeq1, alignedSeq2] = alignSequences(seq1, seq2);
+  ans1 = alignedSeq1;
+  ans2 = alignedSeq2;
+});
 
-  download()(alignedSeq1, nomeArq1 + '-alinhado.txt');
-  download()(alignedSeq2, nomeArq2 + '-alinhado.txt');
+btnDownload.addEventListener('click', function(){
+  download()(ans1, nomeArq1 + '-alinhado.csv');
+  download()(ans2, nomeArq2 + '-alinhado.csv');
 });

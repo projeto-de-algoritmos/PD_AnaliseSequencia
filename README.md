@@ -9,7 +9,7 @@
 | 20/2017263  |  Vinícius de Oliveira Santos |
 
 ## Sobre 
-O projeto visa realizar a leitura de dois arquivos contendo [sequências nucleotídica]() de duas pessoas a fim de dizer o percentual de compatibilidade entre elas
+O projeto visa realizar a leitura de dois arquivos contendo [sequências nucleotídica]() de duas pessoas e retornar arquivos com as sequências alinhadas.
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
