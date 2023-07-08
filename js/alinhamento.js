@@ -94,6 +94,8 @@ function alignSequences(seq1, seq2, matchScore = 2, mismatchPenalty = -5, gapPen
   };
 
   calculateScore(m, n);
+
+  window.alert("Analisado com Sucesso!");
   return align(m, n);
 };
 
