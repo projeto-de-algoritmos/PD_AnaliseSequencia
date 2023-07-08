@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
 body{
     margin:0;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .main{
@@ -22,8 +25,8 @@ body{
 
 .left > h1 {
     color: #77ffc0;
-    font-weight: 700;
-    font-size: 25pt;
+    font-weight: 900;
+    font-size: 30pt;
     margin-bottom: 80px;
     margin-top: 0px;
 }

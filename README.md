@@ -12,15 +12,16 @@
 O projeto visa realizar a leitura de arquivos contendo [sequências nucleotídica](https://pt.khanacademy.org/science/ap-biology/gene-expression-and-regulation/biotechnology/a/dna-sequencing) de duas pessoas e retornar arquivos com as sequências alinhadas para que o usuário possa baixar. Em Bioinformática, um alinhamento de sequências é uma forma de organizar estruturas primárias de DNA, RNA ou proteína para identificar regiões similares que possam ser consequência de relações funcionais, estruturais ou evolucionárias entre elas. Sequências alinhadas de nucleotídeos ou resíduos de aminoácidos são representadas tipicamente como linhas de uma matriz. Espaçamentos (gaps) podem ser inseridos entre os resíduos para que caracteres semelhantes (por algum critério) sejam alinhados em colunas sucessivas.
 
 ## Screenshots
-![Screenshot from 2023-07-08 19-20-22](https://github.com/projeto-de-algoritmos/PD_AnaliseSequencia/assets/53023400/04831b66-5000-4957-89e9-ac1fd707d501) <br>
+![Screenshot from 2023-07-08 19-52-17](https://github.com/projeto-de-algoritmos/PD_AnaliseSequencia/assets/53023400/99d4efe3-61a5-4b82-a954-bfd7f09338c4) <br>
 
-![Screenshot from 2023-07-08 19-21-34](https://github.com/projeto-de-algoritmos/PD_AnaliseSequencia/assets/53023400/c209ccee-cfcd-4b81-9abf-23894a65cfd6) <br>
+![Screenshot from 2023-07-08 19-52-48](https://github.com/projeto-de-algoritmos/PD_AnaliseSequencia/assets/53023400/10753f6f-ef97-419e-a7ac-70900477239e)<br>
 
-![Screenshot from 2023-07-08 19-22-00](https://github.com/projeto-de-algoritmos/PD_AnaliseSequencia/assets/53023400/a91b0ec8-cf27-4c66-969d-3001f8846f19) <br>
+![Screenshot from 2023-07-08 19-51-06](https://github.com/projeto-de-algoritmos/PD_AnaliseSequencia/assets/53023400/904536b6-065a-4f55-b7f2-c0e82006c017) <br>
 
-![Screenshot from 2023-07-08 19-25-34](https://github.com/projeto-de-algoritmos/PD_AnaliseSequencia/assets/53023400/8acedec2-2d41-4500-a1cd-ae0eb4c6ea77) <br>
+![Screenshot from 2023-07-08 19-53-47](https://github.com/projeto-de-algoritmos/PD_AnaliseSequencia/assets/53023400/012e6497-3ed0-4763-8a23-409cb8eeee23) <br>
 
-![Screenshot from 2023-07-08 19-26-10](https://github.com/projeto-de-algoritmos/PD_AnaliseSequencia/assets/53023400/031c6130-cbf3-4dc7-8b48-77bf055c258f)
+
+![Screenshot from 2023-07-08 19-54-21](https://github.com/projeto-de-algoritmos/PD_AnaliseSequencia/assets/53023400/250d740a-99ff-4aef-b34a-b573aaab588b) <br>
 
 ## Instalação 
 **Linguagem**: javascript<br>
