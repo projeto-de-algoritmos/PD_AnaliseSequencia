@@ -23,6 +23,10 @@ O projeto visa realizar a leitura de arquivos contendo [sequências nucleotídic
 
 ![Screenshot from 2023-07-08 19-54-21](https://github.com/projeto-de-algoritmos/PD_AnaliseSequencia/assets/53023400/250d740a-99ff-4aef-b34a-b573aaab588b) <br>
 
+![Screenshot from 2023-07-08 19-56-36](https://github.com/projeto-de-algoritmos/PD_AnaliseSequencia/assets/53023400/5719c2bd-23ea-4162-b4ed-8eaa7697ae87) <br>
+
+![Screenshot from 2023-07-08 19-57-09](https://github.com/projeto-de-algoritmos/PD_AnaliseSequencia/assets/53023400/e9c4c1c9-1f9e-4ef7-9842-f9ac0b63e029) <br>
+
 ## Instalação 
 **Linguagem**: javascript<br>
 **SO**: Ubuntu e Windows
