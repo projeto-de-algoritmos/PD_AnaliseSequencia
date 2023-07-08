@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title>Análise Sequência</title>
+        <link rel="icon" href="img/dna.png" type="image/icon type">
+        <title>Alinhamento de Sequência</title>
         <link href="css/style.css" rel="stylesheet">
     </head>
 
     <body>
-        <p>
-            O Alinhamento de sequências pode ser realizado entre pares ou entre múltiplas sequências, e são classificados como locais (em uma região do gene) ou globais (em todo o gene). Também há o alinhamento múltiplo de sequências onde duas ou mais sequências são alinhadas e comparadas entre si, podendo também escolher ter uma análise local ou global.
-            <br>
-            O alinhamento é realizado de forma em que as sequências tenham identidade (onde são iguais entre si) e gaps (onde há um vazio em uma das sequências) para que tenham um maior score.
-            <br>
-            O score se refere a uma fórmula matemática que atribui um valor a cada nucleotídeo correspondente e penalidades por incompatibilidades. 
-        </p>
-        <label for="arquivo_1">Selecione o primeiro arquivo</label>
-        <textarea rows="8" cols="50" id="preview_1"></textarea>
-
-        <input type="file" id="arquivo_1" name="arquivo_1" accept=".csv, .txt">
-        <label for="arquivo_2">Selecione o segundo arquivo</label>
-        <textarea rows="8" cols="50" id="preview_2"></textarea>
-        
-        <input type="file" id="arquivo_2" name="arquivo_2" accept=".csv, .txt">
-
-        <button type="button" id="analisar" onclick="">Analisar</button>
-        <button type="button" id="baixar" onclick="">Baixar</button>
+        <div class="main">
+            <div class="left">
+                <h1>Alinhamento de Sequência</h1>
+                <img src="img/dna.png" width="300px">
+            </div>
+            <div class="right">
+                <div class="card">
+                    <h2>Selecione dois arquivos para fazer o alinhamento</h2>
+                    <div class="textfield">
+                        <label for="arquivo_1">Selecione o primeiro arquivo</label>
+                        <textarea readonly="true" rows="8" cols="45" id="preview_1"></textarea>
+                        <input type="file" id="arquivo_1" name="arquivo_1" accept=".csv, .txt">
+                    </div>
+                    <div class="textfield">
+                        <label for="arquivo_2">Selecione o segundo arquivo</label>
+                        <textarea readonly="true" rows="8" cols="45" id="preview_2"></textarea>
+                        <input type="file" id="arquivo_2" name="arquivo_2" accept=".csv, .txt">
+                    </div>
+                    <div class="buttonfild">
+                        <button type="button" id="analisar" onclick="">Analisar</button>
+                        <button type="button" id="baixar" onclick="">Baixar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="js/alinhamento.js"></script>
     </body>
