@@ -1,6 +1,7 @@
 let nomeArq1;
 const arquivo_1 = document.querySelector('#arquivo_1');
 const preview_1 = document.querySelector('#preview_1');
+
 let nomeArq2;
 const arquivo_2 = document.querySelector('#arquivo_2');
 const preview_2 = document.querySelector('#preview_2');
@@ -15,11 +16,9 @@ arquivo_1.addEventListener('change', function(){
 
   leitor.addEventListener('load', function(){
     preview_1.value = leitor.result;
-    console.log(arquivo_1);
   });
 
-  if(arquivo)
-  {
+  if(arquivo) {
     leitor.readAsText(arquivo);
   }
 });
@@ -28,31 +27,30 @@ arquivo_2.addEventListener('change', function(){
   const arquivo = this.files[0];
   nomeArq2 = this.files[0].name;
   const leitor = new FileReader();
-  console.log(nomeArq1);
 
   leitor.addEventListener('load', function(){
     preview_2.value = leitor.result;
   });
 
-  if(arquivo)
-  {
+  if(arquivo) {
     leitor.readAsText(arquivo);
   }
 });
 
 const download = function(){
   const link = document.createElement('a');
-  link = 'display: none';
+  link.style.display = 'none';
   document.body.appendChild(link);
   return function(conteudo, nomeArquivo){
-    const blob = new Blob([conteudo], {type: 'octet/stream'})
+    const blob = new Blob([conteudo], {type: 'text/plain'});
     const url = window.URL.createObjectURL(blob);
     link.href = url;
     link.download = nomeArquivo;
     link.click();
     window.URL.revokeObjectURL(url);
-  }
-}
+  };
+};
+
 function alignSequences(seq1, seq2, matchScore = 2, mismatchPenalty = -5, gapPenalty = -1) {
   const m = seq1.length;
   const n = seq2.length;
@@ -97,18 +95,17 @@ function alignSequences(seq1, seq2, matchScore = 2, mismatchPenalty = -5, gapPen
   return align(m, n);
 };
 
-const seq1 = 'AGTACGTA';
-const seq2 = 'TATGCGT';
+// const seq1 = 'AGTACGTA';
+// const seq2 = 'TATGCGT';
 
-const [alignedSeq1, alignedSeq2] = alignSequences(seq1, seq2);
+// const [alignedSeq1, alignedSeq2] = alignSequences(seq1, seq2);
 
-btnDownload.addEventListener('click', function(){
-  download()(alignedSeq1, nomeArq1 + '-saida.csv');
-  download()(alignedSeq2, nomeArq2 + '-saida.csv');
+btnAnalisar.addEventListener('click', function(){
+  const seq1 = preview_1.value;
+  const seq2 = preview_2.value;
+
+  const [alignedSeq1, alignedSeq2] = alignSequences(seq1, seq2);
+
+  download()(alignedSeq1, nomeArq1 + '-alinhado.txt');
+  download()(alignedSeq2, nomeArq2 + '-alinhado.txt');
 });
-
-// Exemplo de uso
-
-//console.log('Sequência 1 alinhada:', alignedSeq1);
-//console.log('Sequência 2 alinhada:', alignedSeq2);
-  
