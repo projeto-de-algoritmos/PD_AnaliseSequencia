@@ -95,7 +95,6 @@ function alignSequences(seq1, seq2, matchScore = 2, mismatchPenalty = -5, gapPen
 
   calculateScore(m, n);
 
-  window.alert("Analisado com Sucesso!");
   return align(m, n);
 };
 
@@ -116,6 +115,11 @@ btnAnalisar.addEventListener('click', function(){
   const [alignedSeq1, alignedSeq2] = alignSequences(seq1, seq2);
   ans1 = alignedSeq1;
   ans2 = alignedSeq2;
+
+  preview_1.value = alignedSeq1;
+  preview_2.value = alignedSeq2;
+
+  window.alert("Alinhado com Sucesso!");
 });
 
 btnDownload.addEventListener('click', function(){
